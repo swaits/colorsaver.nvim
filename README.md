@@ -130,6 +130,21 @@ Once colorsaver is installed and configured, it works automatically. Your
 current colorscheme will be saved upon change and reloaded when Neovim starts
 or when any Neovim instance changes it (when `auto_load` is `true`).
 
+## Similar Projects
+
+Before creating this, I used
+[last-color.nvim](https://github.com/raddari/last-color.nvim). It's fantastic.
+
+But I wanted to take it a step further. Specifically, I often run multiple nvim
+instances in my terminal multiplexer. When I change colors in one, I wanted all
+the others to change too. That was my main goal here.
+
+It also adds some other niceties, like debouncing to avoid problems when
+switching colorschemes too quickly (as is easy to do when browsing through
+schemes with Telescope).
+
+That said, they both work. Use what works best for you!
+
 ## Contributing
 
 Contributions to colorsaver are welcome! Please feel free to fork the
