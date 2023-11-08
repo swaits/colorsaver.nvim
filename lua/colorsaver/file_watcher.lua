@@ -18,7 +18,8 @@ function FileWatcher.new(path, callback)
   self.path = path
   self.callback = callback
   -- Initialize the file system watcher with libuv.
-  self.fs_watcher = vim.loop.new_fs_event()
+  local uv = vim.uv or vim.loop
+  self.fs_watcher = uv.new_fs_event()
   return self
 end
 

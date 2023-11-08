@@ -22,7 +22,8 @@ function M.debounce(func, delay)
     end
 
     -- Create a new timer.
-    timer = vim.loop.new_timer()
+    local uv = vim.uv or vim.loop
+    timer = uv.new_timer()
 
     -- Start the timer with the specified delay.
     timer:start(
